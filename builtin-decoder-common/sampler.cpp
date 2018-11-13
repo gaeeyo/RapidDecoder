@@ -1,6 +1,7 @@
 #include "sampler.h"
 
 #include <stdlib.h>
+#include <cstring>
 
 // opaque_sampler
 

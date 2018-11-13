@@ -1,19 +1,15 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 28
 
     sourceSets.main {
         jni.srcDirs += ['../builtin-decoder-common']
     }
-    defaultConfig {
-        ndk {
-            abiFilters "armeabi", "armeabi-v7a", "x86"
-            moduleName "jpeg-decoder"
-            ldLibs "jnigraphics"
-            cFlags "-ffunction-sections -fdata-sections -fvisibility=hidden -Wl,--gc-sections " +
-                    "-Ibuiltin-decoder-common"
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/jni/CMakeLists.txt"
         }
     }
 }

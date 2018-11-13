@@ -1,6 +1,7 @@
 #include <jni.h>
 #include <android/bitmap.h>
 #include <sampler.h>
+#include <cstring>
 
 #include "jpgd.h"
 

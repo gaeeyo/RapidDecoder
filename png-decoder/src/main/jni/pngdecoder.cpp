@@ -1,6 +1,9 @@
 #include <stdlib.h>
 #include <jni.h>
 #include <android/bitmap.h>
+#include <cstring>
+
+#include "libpng/png.h"
 
 #include "pngdecoder.h"
 #include "sampler.h"
